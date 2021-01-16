@@ -14,29 +14,33 @@ require ('jest');
 const isWaterBoiling = require('../src/fusionPlant');
 
 it('The temp should be of typeof number', () => {
+    //arrange
     let input = 'fifty';
-    const errorRecieved = () => {
+    const arrowFunction = () => {
         isWaterBoiling(input);
     }
-
-    expect(errorRecieved).toThrow('Illegal input');
+    //act + assert
+    expect(arrowFunction).toThrow('Illegal input');
 })
 
 it('It should return true if input temperature is 100 degs', () => {
+    //arrange
     let input = 100;
     const expected = true;
 
+    //act
     const actual = isWaterBoiling(input);
-
+    //assert
     expect(actual).toBe(expected);
 })
 
 it('It should return false if value is less than 100 deg', () => {
+    //arrange
     let input = 50;
     const expected = false;
-
+    //act
     const actual = isWaterBoiling(input);
-
+    //assert
     expect(actual).toBe(expected);
 })
 

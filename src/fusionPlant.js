@@ -10,3 +10,9 @@ function isWaterBoiling(degrees) {
 }
 
 module.exports = isWaterBoiling;
+
+/**
+ * if you get an error recieved function did not through, 
+ * it means that the code/codition for the the corresponding test 
+ * is missing
+ */
